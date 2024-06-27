@@ -1,15 +1,13 @@
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+Explanation with nested loop:
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+- Loop through the array
+- Create a second loop, and if the value in the first loop + the value in the second loop = target, then we return the indices of both numbers
 
-You can return the answer in any order.
+Explanation with hash map:
 
-Example 1:
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-Explanation:
-
-Loop through the array twice, if we find two numbers that combined equal the target, return the indices of both.
+- create an empty object
+- loop through the array
+- create a variable that is equal to the target minus the value of each number in the array (searchingNumber)
+- if searchingNumber is already in the hash map, then we have found the two numbers that add up to the target. The current number and searchingNumber stored in the hash map are the solution
+- if searchingNumber is not in the hash map, then add it and its index to the hash map
+- when the solution is found, return the indices of the two numbers

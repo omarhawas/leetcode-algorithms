@@ -1,0 +1,4 @@
+- Initialize seqIndex which will act as a pointer for the second list (subsequence list)
+- Loop through the second list and check if the value exists in the first list
+- If that number from the second list is present in the first list, then add one to the index and push the pointer to the next number in second list
+- Do this until you reach the end of the second list (index === secondList.length)
